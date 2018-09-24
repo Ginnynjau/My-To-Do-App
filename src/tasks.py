@@ -1,18 +1,22 @@
 todo_list = []
 
+#Function to create a new task
 def create_task(task):
     new_task = input("Add a task: ")
     todo_list.append(new_task)
     print (todo_list)
 
-
+#Function to delete a task
 def delete_task(task):
-    task_deleted = todo_list.remove('item')
+    for item in task:
+        todo_list.remove('item')
     print (todo_list)
 
+#Function to mark a task as Finished
 def mark_as_finished(task):
-     for item in task:
-         pass
+    pass
 
+#Function that deletes all the tasks in a list
 def delete_all_tasks(task):
-     pass
+    todo_list.clear()
+    
