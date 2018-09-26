@@ -32,9 +32,13 @@ def main_menu():
             print("Exiting the To-Do list app...")
             break
 
+        elif type(option) != int:
+            print("Your Choice is Invalid. Please enter 1-5") 
+            option
+
         else:
             print("Your Choice is Invalid. Please enter 1-5") 
-            main_menu()
+            optionn
     exit
 
 if __name__ == "__main__": 
@@ -42,16 +46,21 @@ if __name__ == "__main__":
         answer = input("Do you have an account? Enter Y (Yes) or N (No): ")
         if answer == "N" or answer == "n" or answer == "No" :
             print ("Please sign up.")
-            add_account('name', 'password')
+            name = input("Enter your Username: ")
+            password = input("Enter your Password: ")
+            add_account(name, password)
             main_menu()
             #login('name', 'password')
             
         elif answer == "Y" or answer == "y" or answer == "Yes" :
-            login('name', 'password')
-            if login('name', 'password') == True:
+            print("Please enter your account credentials.")
+            name = input("Username: ")
+            password = input("Password: ")
+            login(name, password)
+            if login(name, password) == True:
                 main_menu()
 
-            if login('name', 'password') == False:
+            if login(name, password) == False:
                 answer
            
         else:

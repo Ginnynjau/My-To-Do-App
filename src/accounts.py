@@ -3,8 +3,6 @@ accounts = {}
 
 #Adds the key value pair to the accounts dictionary
 def add_account(name, password):
-    name = input("Enter your Username: ")
-    password = input("Enter your Password: ")
     if name != "" and password !="":
         accounts[password] = name
         print("Thank you {}, You are now a registered user." .format(name))
@@ -17,10 +15,7 @@ def add_account(name, password):
 
 #Checks if the password and corresponding Username exist in the accounts dicitionary
 def login(name, password):
-    print("Please enter your account credentials.")
-    name = input("Username: ")
-    password = input("Password: ")
-    if name in accounts and accounts[password] is name:
+    if name in accounts and accounts[password] == name:
         print("Welcome {}" .format(name))
         return True
     else:
