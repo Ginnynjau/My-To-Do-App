@@ -38,7 +38,7 @@ def main_menu():
 
         else:
             print("Your Choice is Invalid. Please enter 1-5") 
-            optionn
+            option
     exit
 
 if __name__ == "__main__": 
@@ -50,8 +50,8 @@ if __name__ == "__main__":
             password = input("Enter your Password: ")
             add_account(name, password)
             main_menu()
-            #login('name', 'password')
-            
+            #login(name, password)
+      
         elif answer == "Y" or answer == "y" or answer == "Yes" :
             print("Please enter your account credentials.")
             name = input("Username: ")
@@ -59,14 +59,14 @@ if __name__ == "__main__":
             login(name, password)
             if login(name, password) == True:
                 main_menu()
-
+    
             if login(name, password) == False:
                 answer
-           
+       
         else:
             answer not in ('y', 'n', 'Y', 'N', 'Yes', 'No')
             print ("INVALID RESPONSE.")
-
+            
     exit    
 
 

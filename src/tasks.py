@@ -28,10 +28,22 @@ def delete_task(task):
 
 #Function to mark a task as Finished
 def mark_as_finished(task):
-    pass
+    task = input("Enter the Task Name: ")
+    #status = "-->Finished"
+    for item in todo_list:
+        if item == task:
+            print(task + "-->Finished") 
+            print("{} has been Marked as Complete." .format(task.upper()))
+            print(todo_list)
+            return True
+        else:    
+            print("Cannot Find the Task.")
+            return False
+    print(todo_list) 
 
 #Function that deletes all the tasks in a list
 def delete_all_tasks(task):
     todo_list.clear()
     print(todo_list)
+    
     
